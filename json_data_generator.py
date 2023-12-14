@@ -27,7 +27,7 @@ def getAnswer():
         ai_result += chunk.text
         ai_result += "\n"
 
-    format_result = ai_result.replace("\n```","").replace("```","").replace("```json","")
+    format_result = ai_result.replace("```json","").replace("\n```","").replace("```","")
     
     result_text.config(state="normal")
     result_text.delete("1.0", "end")
