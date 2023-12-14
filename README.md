@@ -16,7 +16,7 @@ This Python script, `json_data_generator.py`, provides a simple graphical user i
     pip install -r requirements.txt
     ```
 
-2. Set up your Google Generative AI API key by replacing the empty string (`""`) with your actual API key in the `genai.configure(api_key="")` line within the script.
+2. Set up your Google Generative AI API key by following the instructions on the [Google AI website](https://ai.google.dev/tutorials/setup). Replace the empty string (`""`) with your actual API key in the `genai.configure(api_key="")` line within the script.
 
 3. Run the script using the following command:
 
