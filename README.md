@@ -8,6 +8,15 @@ This Python script, `json_data_generator.py`, provides a simple graphical user i
 - **Generate JSON with Your Keyword:** Input your own JSON data as a reference to generate more data.
 - **Utilize Your Own JSON:** Allows users to use their JSON as a seed for generating additional data.
 
+## Example
+- Generate JSON with Your Keyword
+
+![with keyword](https://github.com/Mini-Mark/json-data-generator-with-ai/blob/main/example_images/keyword.png?raw=true)
+
+- Utilize Your Own JSON
+
+![own json](https://github.com/Mini-Mark/json-data-generator-with-ai/blob/main/example_images/json.png?raw=true)
+
 ## Getting Started
 
 1. Install the required libraries by running the following command:
