@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-duration: 0.1s;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* scrollbar */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background-color: #212426;
+}
+body .container .header {
+  background: #212426;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6vh;
+  font-size: 1.2em;
+  padding: 10px 100px;
+}
+body .container .header .title {
+  font-weight: bolder;
+}
+body .container .header .github a {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  color: white;
+  font-weight: bold;
+}
+body .container .section {
+  padding: 20px 100px;
+}
+body .container .section .title {
+  color: #e9ac3b;
+}
+body .container .section .title.highlight,
+body .container .section .title .highlight {
+  color: #f23d3d;
+}
+body .container .section.action {
+  padding-top: 30px;
+  background-color: #e9ac3b;
+}
+body .container .section.action form {
+  height: 100%;
+}
+body .container .section.action form .form-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  height: 100%;
+}
+body .container .section.action form .form-section .box {
+  flex: 1;
+  background-color: #2a2e32;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  height: unset;
+}
+body .container .section.action form .form-section .google-key,
+body .container .section.action form .form-section .help {
+  overflow: auto;
+}
+body .container .section.action form .form-section .google-key .description,
+body .container .section.action form .form-section .help .description {
+  font-size: 18px;
+  line-height: 1.3;
+}
+body .container .section.action form .form-section .google-key .description a,
+body .container .section.action form .form-section .help .description a {
+  color: #88b1ff;
+  font-weight: bold;
+}
+body .container .section.action form .form-section .google-key .title {
+  margin-bottom: 10px;
+}
+body .container .section.action form .form-section .google-key .title .highlight {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+body .container .section.action form .form-section .google-key input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  background-color: #353739;
+  color: white;
+}
+body .container .section.action form .form-section .prompt {
+  flex: 2;
+}
+body .container .section.action form .form-section .prompt .input {
+  position: relative;
+  margin-top: 10px;
+  min-height: calc(30vh - 75px);
+  background-color: #353739;
+  border-radius: 10px;
+}
+body .container .section.action form .form-section .help .code-box {
+  margin: 10px 0px;
+  position: relative;
+  background-color: #212426;
+  border-radius: 5px;
+  padding: 5px;
+}
+body .container .section.action form .form-section .help .help-section .title {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  margin-bottom: 15px;
+}
+body .container .section.action form .form-section .help .help-section .title h2.active {
+  position: relative;
+}
+body .container .section.action form .form-section .help .help-section .title h2.active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: #e9ac3b;
+  border-radius: 25px;
+}
+body .container .section.action form .form-section .help .help-section .title h2:not(.active) {
+  color: #747474 !important;
+  cursor: pointer;
+}
+body .container .section.action form .form-section .help .help-section .title h2:not(.active):hover {
+  color: #c1c1c1 !important;
+}
+body .container .section.action form .form-section .help .help-section .description:not(.active) {
+  display: none;
+}
+body .container .section.action .center {
+  text-align: center;
+}
+body .container .section.action .center button.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: #e9ac3b;
+  background-color: #212426;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+body .container .section.action .center button.btn:hover {
+  background-color: #353739;
+}
+body .container .section.result .result-item {
+  border-top: 1px solid #353739;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+body .container .section.result .result-item:first-child {
+  border-top: none;
+}
+body .container .section.result .result-item .result-prompt,
+body .container .section.result .result-item .result-output {
+  flex: 1;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+}
+body .container .section.result .result-item .result-output {
+  flex: 1.75;
+}
+body .container .section.result .result-item .arrow {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+body .container .section.result .result-item .result {
+  margin-top: 10px;
+  height: 100%;
+  background-color: #353739;
+  border-radius: 15px;
+  padding: 15px;
+  position: relative;
+}
+body .container .section.result .result-item .result * {
+  font-size: 17px !important;
+}
+body .container .section.result .result-item .action {
+  color: #747474;
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  row-gap: 30px;
+}
+body .container .section.result .result-item .action .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body .container .section.result .result-item .action .btn:hover {
+  color: #dadada;
+}/*# sourceMappingURL=style.css.map */

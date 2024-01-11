@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Json Data Generator</title>
+		<link rel="stylesheet" href="./static/styles/prism.css" />
+		<link rel="stylesheet" href="./static/styles/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="title">JSON DATA GENERATOR</div>
+				<div class="github">
+					<a
+						target="_blank"
+						href="https://github.com/Mini-Mark/json-data-generator-with-ai"
+					>
+						<div class="icon">
+							<img src="./static/assets/github-icon.svg" />
+						</div>
+						json-data-generator-with-ai</a
+					>
+				</div>
+			</div>
+			<div class="section action">
+				<form onsubmit="submitForm(event)">
+					<div class="form-section">
+						<div class="help box">
+							<div class="help-section">
+								<div class="title">
+									<h2
+										class="active help-btn"
+										onclick="toggleHelp(1)"
+									>
+										Help #1
+									</h2>
+									<h2
+										class="help-btn"
+										onclick="toggleHelp(2)"
+									>
+										Help #2
+									</h2>
+								</div>
+								<div class="description help-1 active">
+									You can initiate the input using either your
+									JSON and key. <br />
+									<br />For instance :
+
+									<div class="code-box">
+										<code class="language-json"
+											>{ "name": "John", "age": 23,
+											"address": "Thailand" }
+										</code>
+									</div>
+								</div>
+								<div class="description help-2">
+									Alternatively, you can use keywords as
+									prompts. <br />
+									<br />For example :
+
+									<div class="code-box">
+										<code class="language-json"
+											>Provinces in Thailand
+										</code>
+									</div>
+
+									<div class="code-box">
+										<code class="language-json"
+											>Dataset of users
+										</code>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prompt box">
+							<div class="title"><h2>Prompt</h2></div>
+							<div class="input">
+								<textarea
+									placeholder="Enter your prompt here . . . "
+									id="editing"
+									spellcheck="false"
+									oninput="update(this.value); sync_scroll(this);"
+									onscroll="sync_scroll(this);"
+									onkeydown="check_tab(this, event);"
+									required
+								></textarea>
+								<pre id="highlighting" aria-hidden="true">
+									<code class="language-json" id="highlighting-content">
+									</code>
+								</pre>
+							</div>
+						</div>
+						<div class="google-key box">
+							<div class="title">
+								<h2>
+									Google API Key
+									<span class="highlight">( required )</span>
+								</h2>
+							</div>
+							<div class="description">
+								Set up your Google Generative AI API key by
+								following the instructions on the
+								<a
+									target="_blank"
+									href="https://ai.google.dev/tutorials/setup"
+									>Google AI website</a
+								>.
+								<br />
+								<input
+									id="api_key"
+									type="password"
+									placeholder="Enter your google api key here."
+									value="{{ api_key }}"
+									required
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="center">
+						<button class="btn" type="submit">
+							<b>Generate</b>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="section result" id="result-list"></div>
+
+			<script src="./static/scripts/prism.js"></script>
+			<script src="./static/scripts/script.js"></script>
+		</div>
+	</body>
+</html>
