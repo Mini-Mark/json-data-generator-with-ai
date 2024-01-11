@@ -23,7 +23,7 @@ function refreshResult(id) {
 	var jsonData = document.getElementById(`hidden-prompt-${id}`).value;
 	var apiKey = document.getElementById("api_key").value;
 
-	promptList.push(jsonData);
+	promptList[id - 1] = jsonData;
 
 	document.getElementById(`result-text-${id}`).innerHTML = "Loading . . . .";
 	document.getElementById(`hidden-result-text-${id}`).value = "";
@@ -45,7 +45,7 @@ function refreshResult(id) {
 				.replace(/\\t/g, "\t");
 
 			result = result.slice(1, result.length - 1);
-			resultList.push(result);
+			resultList[id - 1] = result;
 
 			let resultElement = document.getElementById(`result-text-${id}`);
 			resultElement.innerHTML = result;
