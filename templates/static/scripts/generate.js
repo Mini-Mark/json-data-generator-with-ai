@@ -25,6 +25,9 @@ async function fetchJson(prompt) {
 function fixJsonFormat(json) {
 	let result = JSON.stringify(json, null, 2)
 		.replace(/\\"/g, '"')
+		.replace(/("\\n|\\n")/g, '"')
+		.replace(/}(?=((:?\s*)?[^,]*(:?\s*)?\\n:?\s*)?[^,]*(:?\s*)?{)/g, "\n},")
+		.replace(/(?<=\s\d*)\\n(?=\d*)/g, "")
 		.replace(/\\n/g, "\n")
 		.replace(/\\t/g, "\t");
 
