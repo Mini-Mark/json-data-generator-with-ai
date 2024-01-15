@@ -47,6 +47,8 @@ This Python script, `main.py`, provides a simple graphical user interface for ge
     python main.py
     ```
 
+6. Open Browser and Navigate to `localhost:5000`
+
 ## Usage
 1. Enter the input JSON data in the prompt text field.
 2. Click the "Generate" button to generate more JSON data based on the provided input.
